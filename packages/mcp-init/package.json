@@ -1,0 +1,39 @@
+{
+  "name": "mcp-init",
+  "version": "0.1.1",
+  "description": "Create a new MCP server with one command - batteries included.",
+  "author": "stephencme",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stephencme/mcp-init.git",
+    "directory": "packages/mcp-init"
+  },
+  "keywords": [
+    "create",
+    "mcp",
+    "server",
+    "init",
+    "model-context-protocol",
+    "cli",
+    "generator"
+  ],
+  "bin": "./dist/index.js",
+  "scripts": {
+    "build": "tsup src/index.ts --dts --clean",
+    "build:watch": "tsup src/index.ts --dts --watch"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^12.0.0",
+    "fs-extra": "^11.2.0",
+    "validate-npm-package-name": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.11.28",
+    "@types/validate-npm-package-name": "^4.0.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.4.2"
+  }
+}

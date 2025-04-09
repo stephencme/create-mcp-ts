@@ -1,0 +1,44 @@
+{
+  "name": "mcpi-template-default",
+  "version": "0.1.1",
+  "description": "The default template for mcp-init.",
+  "author": "stephencme",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stephencme/mcp-init.git",
+    "directory": "packages/mcpi-template-default"
+  },
+  "keywords": [
+    "create",
+    "mcp",
+    "server",
+    "init",
+    "model-context-protocol",
+    "cli",
+    "generator"
+  ],
+  "bin": "./dist/index.js",
+  "scripts": {
+    "start": "concurrently --names \"build:watch,inspector:watch\" \"npm run build:watch\" \"npm run inspector:watch\"",
+    "build": "tsup src/index.ts --dts --clean",
+    "build:watch": "tsup src/index.ts --dts --watch",
+    "inspector": "npx @modelcontextprotocol/inspector -- nodemon -q dist/index.js",
+    "inspector:watch": "npx @modelcontextprotocol/inspector -- nodemon -q --watch dist dist/index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.13",
+    "concurrently": "^9.1.2",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "ts-jest": "^29.3.1",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  }
+}
