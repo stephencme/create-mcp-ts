@@ -77,7 +77,7 @@ async function run() {
   printCreatingServer(resolvedProjectPath);
 
   // Determine which template to use (default or custom)
-  const templateName = options.template || "mcpi-templates-default";
+  const templateName = options.template || "mcpi-template-default";
   printUsingTemplate(templateName);
 
   // Copy template contents
