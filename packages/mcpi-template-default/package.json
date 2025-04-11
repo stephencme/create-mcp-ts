@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "Default template for mcp-init.",
   "author": "stephencme",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/stephencme/mcp-init.git",
