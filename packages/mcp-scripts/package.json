@@ -1,7 +1,7 @@
 {
-  "name": "mcpi-template-default",
+  "name": "mcp-scripts",
   "version": "0.1.1",
-  "description": "The default template for mcp-init.",
+  "description": "Scripts used by mcp-init.",
   "author": "stephencme",
   "license": "UNLICENSED",
   "repository": {
@@ -11,17 +11,11 @@
   },
   "bin": "./dist/index.js",
   "scripts": {
-    "start": "mcp-scripts start",
-    "build": "mcp-scripts build",
-    "setup": "mcp-scripts setup"
+    "build": "tsup src/index.ts src/setup.ts --dts --clean"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.8.0",
-    "zod": "^3.24.2"
-  },
-  "devDependencies": {
     "@types/node": "^22.13.13",
-    "mcp-scripts": "file:../mcp-scripts",
+    "tsup": "^8.4.0",
     "typescript": "^5.8.2"
   }
 }

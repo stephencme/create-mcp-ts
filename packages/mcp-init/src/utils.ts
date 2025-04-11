@@ -88,13 +88,13 @@ const successString = (projectName: string, path: string) =>
 Inside that directory, you can run several commands:
 
   ${chalk.cyan("npm start")}
-    Starts the development server.
+    Build MCP server AND watch for changes.
 
   ${chalk.cyan("npm run build")}
-    Bundles the app into static files for production.
+    Build MCP server.
 
-  ${chalk.cyan("npm test")}
-    Starts the test runner.
+  ${chalk.cyan("npm run setup")}
+    Setup MCP clients: Cursor, Windsurf, Claude Desktop.
 
 We suggest that you begin by typing:
 
