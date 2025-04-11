@@ -97,9 +97,6 @@ async function run() {
     } else {
       // For npm packages, first create a package.json
       const tempPackageJson = {
-        name: projectName,
-        version: "0.1.0",
-        private: true,
         dependencies: {
           [templateName]: "latest",
         },
@@ -138,6 +135,42 @@ async function run() {
     console.log();
   } catch (error) {
     console.error("Failed to copy template:", error);
+    process.exit(1);
+  }
+
+  // Update package.json with project name and version
+  try {
+    const projectPackageJson = {
+      name: projectName,
+      version: "0.1.0",
+    };
+    const packageJsonPath = path.join(resolvedProjectPath, "package.json");
+    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
+    const {
+      description,
+      license,
+      bin,
+      dependencies,
+      devDependencies,
+      scripts,
+    } = packageJson;
+    const updatedPackageJson = {
+      ...projectPackageJson,
+      description,
+      license,
+      bin,
+      scripts,
+      dependencies,
+      devDependencies,
+    };
+    fs.writeFileSync(
+      packageJsonPath,
+      JSON.stringify(updatedPackageJson, null, 2)
+    );
+    console.log("Updated package.json with project name and version.");
+    console.log();
+  } catch (error) {
+    console.error("Failed to update package.json:", error);
     process.exit(1);
   }
 

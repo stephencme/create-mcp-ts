@@ -28,7 +28,7 @@ describe("mcp-init", () => {
     const packageJson = JSON.parse(
       fs.readFileSync(path.join(testProjectDir, "package.json"), "utf-8")
     );
-    // expect(packageJson.name).toBe(testProjectDir);
+    expect(packageJson.name).toBe(testProjectDir);
     expect(packageJson.scripts).toBeDefined();
     expect(packageJson.scripts.start).toBeDefined();
     expect(packageJson.scripts.build).toBeDefined();
