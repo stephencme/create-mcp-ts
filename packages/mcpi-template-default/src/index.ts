@@ -4,11 +4,13 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 
+const packageJson = require("../package.json") as any;
+
 // Create a new MCP server
 const server = new McpServer(
   {
-    name: "test-mcp",
-    version: "0.1.0",
+    name: packageJson.name,
+    version: packageJson.version,
   },
   {
     instructions:

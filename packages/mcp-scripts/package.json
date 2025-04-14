@@ -1,7 +1,7 @@
 {
   "name": "mcp-scripts",
   "version": "0.1.1",
-  "description": "Scripts used by mcp-init.",
+  "description": "Scripts that power mcp-init projects.",
   "author": "stephencme",
   "license": "UNLICENSED",
   "repository": {

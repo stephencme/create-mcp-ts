@@ -1,7 +1,7 @@
 {
   "name": "mcp-init",
   "version": "0.1.2",
-  "description": "Create a new MCP server with one command - batteries included.",
+  "description": "Create a new MCP server, batteries included.",
   "author": "stephencme",
   "license": "UNLICENSED",
   "repository": {

@@ -1,7 +1,7 @@
 {
   "name": "mcpi-template-default",
   "version": "0.1.1",
-  "description": "Default template for mcp-init.",
+  "description": "Default project template for mcp-init.",
   "author": "stephencme",
   "license": "MIT",
   "repository": {

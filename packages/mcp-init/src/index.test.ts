@@ -3,7 +3,8 @@ import fs from "fs-extra";
 import path from "path";
 
 describe("mcp-init", () => {
-  const testProjectDir = "test-mcp-server";
+  const testProjectDir = "./.mcpi/test-mcp-server";
+  const testProjectName = path.basename(testProjectDir);
   const templatePath = "../mcpi-template-default";
 
   afterEach(() => {
@@ -28,7 +29,7 @@ describe("mcp-init", () => {
     const packageJson = JSON.parse(
       fs.readFileSync(path.join(testProjectDir, "package.json"), "utf-8")
     );
-    expect(packageJson.name).toBe(testProjectDir);
+    expect(packageJson.name).toBe(testProjectName);
     expect(packageJson.scripts).toBeDefined();
     expect(packageJson.scripts.start).toBeDefined();
     expect(packageJson.scripts.build).toBeDefined();
