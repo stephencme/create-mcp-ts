@@ -1,5 +1,9 @@
 # mcp-init
 
+```shell
+npx mcp-init my-mcp-server
+```
+
 [packages/mcp-init](./packages/mcp-init/README.md)
 
 Create a new MCP server (batteries included).
