@@ -14,7 +14,7 @@ const server = new McpServer(
   },
   {
     instructions:
-      "Use these tools to test your ability to communicate with Model Context Protocol (MCP) servers.",
+      "These tools communicate with a reference Model Context Protocol (MCP) server.",
   }
 );
 

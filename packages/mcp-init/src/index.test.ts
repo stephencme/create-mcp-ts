@@ -31,8 +31,9 @@ describe("mcp-init", () => {
     );
     expect(packageJson.name).toBe(testProjectName);
     expect(packageJson.scripts).toBeDefined();
-    expect(packageJson.scripts.start).toBeDefined();
+    expect(packageJson.scripts.dev).toBeDefined();
     expect(packageJson.scripts.build).toBeDefined();
     expect(packageJson.scripts.setup).toBeDefined();
+    expect(packageJson.scripts.eject).toBeDefined();
   });
 });

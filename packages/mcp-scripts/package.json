@@ -1,9 +1,9 @@
 {
   "name": "mcp-scripts",
-  "version": "0.1.3",
-  "description": "Scripts that power mcp-init projects.",
+  "version": "0.2.0",
+  "description": "The build tools that powermcp-init projects",
   "author": "stephencme",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/stephencme/mcp-init.git",

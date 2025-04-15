@@ -43,7 +43,7 @@ function writeConfig(path: string, config: MCPConfig) {
 // Add MCP config to MCP clients
 function addMCPConfig(serverName: string, projectPath: string) {
   const newConfig = {
-    command: "node",
+    command: process.execPath,
     args: [join(projectPath, "dist", "index.js")],
   };
 

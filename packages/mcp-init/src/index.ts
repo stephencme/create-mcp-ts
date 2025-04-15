@@ -66,13 +66,13 @@ async function run() {
   }
 
   // Check if directory already exists
-  if (fs.existsSync(projectDir)) {
-    printDirectoryExists(projectDir);
+  if (fs.existsSync(resolvedProjectPath)) {
+    printDirectoryExists(resolvedProjectPath);
     process.exit(1);
   }
 
   // Create project directory
-  fs.ensureDirSync(projectName);
+  fs.ensureDirSync(resolvedProjectPath);
 
   printCreatingServer(resolvedProjectPath);
 
@@ -143,21 +143,13 @@ async function run() {
     const projectPackageJson = {
       name: projectName,
       version: "0.1.0",
+      private: true,
     };
     const packageJsonPath = path.join(resolvedProjectPath, "package.json");
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
-    const {
-      description,
-      license,
-      bin,
-      dependencies,
-      devDependencies,
-      scripts,
-    } = packageJson;
+    const { bin, dependencies, devDependencies, scripts } = packageJson;
     const updatedPackageJson = {
       ...projectPackageJson,
-      description,
-      license,
       bin,
       scripts,
       dependencies,

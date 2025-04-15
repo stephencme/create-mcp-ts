@@ -45,7 +45,7 @@ const helpString = () => `Only ${chalk.green(
         "mcpi-template-default"
       )}
       - a local path relative to the current working directory: ${chalk.green(
-        "file:../my-custom-template"
+        "file:../your-custom-template"
       )}
 
     If you have any problems, do not hesitate to file an issue:
@@ -57,7 +57,7 @@ const specifyProjectDirectoryString = (programName: string) =>
   ${chalk.cyan(programName)} ${chalk.green("<project-directory>")}
 
 For example:
-  ${chalk.cyan(programName)} ${chalk.green("my-mcp-server")}
+  ${chalk.cyan(programName)} ${chalk.green("your-mcp-server")}
 
 Run ${chalk.cyan(`${programName} --help`)} to see all options.`;
 
@@ -87,7 +87,7 @@ const successString = (projectName: string, path: string) =>
   `Success! Created ${chalk.green(projectName)} at ${chalk.green(path)}
 Inside that directory, you can run several commands:
 
-  ${chalk.cyan("npm start")}
+  ${chalk.cyan("npm run dev")}
     Build MCP server AND watch for changes.
 
   ${chalk.cyan("npm run build")}
@@ -100,7 +100,7 @@ We suggest that you begin by typing:
 
   ${chalk.cyan("cd")} ${projectName}
 
-  ${chalk.cyan("npm start")}
+  ${chalk.cyan("npm run dev")}
 
 Happy hacking!`;
 

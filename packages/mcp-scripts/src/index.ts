@@ -5,7 +5,7 @@ import { join } from "path";
 
 // Define commands
 const commands = {
-  start: "tsup src/index.ts --dts --watch",
+  dev: "tsup src/index.ts --dts --watch",
   build: "tsup src/index.ts --dts --clean",
   setup: `node ${join(__dirname, "setup.js")}`,
 };
@@ -36,9 +36,12 @@ const command = process.argv[2];
 if (!command || !(command in commands) || command === "help") {
   console.error("Usage: mcp-scripts <command>");
   console.error("Available commands:");
-  console.error("  start  build MCP server AND watch for changes");
+  console.error("  dev    build MCP server and watch for changes");
   console.error("  build  build MCP server");
-  console.error("  setup  setup MCP clients: Cursor, Windsurf, Claude Desktop");
+  console.error(
+    "  setup  set up MCP clients: Cursor, Windsurf, and Claude Desktop"
+  );
+  console.error("  eject  eject from mcp-scripts");
   console.error("  help   output usage information");
   process.exit(1);
 }

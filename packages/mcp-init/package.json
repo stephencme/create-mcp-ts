@@ -1,9 +1,9 @@
 {
   "name": "mcp-init",
-  "version": "0.1.3",
-  "description": "Create a new MCP server, batteries included.",
+  "version": "0.2.0",
+  "description": "Create a new MCP server in TypeScript, batteries included.",
   "author": "stephencme",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/stephencme/mcp-init.git",

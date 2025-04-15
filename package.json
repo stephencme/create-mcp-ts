@@ -2,5 +2,16 @@
   "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "build": "npm install && npm run build -ws",
+    "version:major": "npm run build && npm version major -ws",
+    "version:minor": "npm run build && npm version minor -ws",
+    "version:patch": "npm run build && npm version patch -ws",
+    "postversion": "node scripts/updateTemplatesDeps.cjs",
+    "publish": "npm run build && npm publish -ws"
+  },
+  "devDependencies": {
+    "glob": "^11.0.1"
+  }
 }
