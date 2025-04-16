@@ -1,6 +1,6 @@
 # mcp-init
 
-![NPM Version](https://img.shields.io/npm/v/:mcp-init)
+![NPM Version](https://img.shields.io/npm/v/mcp-init)
 
 
 [packages/mcp-init](./packages/mcp-init/README.md)
