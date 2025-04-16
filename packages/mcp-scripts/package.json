@@ -1,6 +1,6 @@
 {
   "name": "mcp-scripts",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "The build tools that powermcp-init projects",
   "author": "stephencme",
   "license": "MIT",

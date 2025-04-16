@@ -1,6 +1,6 @@
 {
   "name": "mcp-init",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Create a new MCP server in TypeScript, batteries included.",
   "author": "stephencme",
   "license": "MIT",

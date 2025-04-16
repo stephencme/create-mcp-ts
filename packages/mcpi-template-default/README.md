@@ -33,7 +33,6 @@ It checks the respective configuration files (`.json`) and adds an entry for you
 ```json
 {
   "mcpConfig": {
-    ...
     "your-mcp-server": {
       "command": "node",
       "args": ["/path/to/your-mcp-server/dist/index.js"]

@@ -26,7 +26,6 @@ This script checks if `your-mcp-server` already exists in each client's respecti
 ```json
 {
   "mcpConfig": {
-    ...
     "your-mcp-server": {
       "command": "node",
       "args": ["/path/to/your-mcp-server/dist/index.js"]

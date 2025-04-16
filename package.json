@@ -5,15 +5,12 @@
   ],
   "scripts": {
     "build": "npm run build -ws",
-    "version:major": "npm run version major",
-    "version:minor": "npm run version minor",
-    "version:patch": "npm run version patch",
     "version": "npm version -ws",
     "postversion": "node scripts/updateTemplatesDeps.cjs",
-    "publish": "npm publish -ws",
-    "release:major": "npm run build && npm run version:major && npm run publish",
-    "release:minor": "npm run build && npm run version:minor && npm run publish",
-    "release:patch": "npm run build && npm run version:patch && npm run publish"
+    "version:major": "npm run build && npm run version major",
+    "version:minor": "npm run build && npm run version minor",
+    "version:patch": "npm run build && npm run version patch",
+    "publish": "npm publish -ws"
   },
   "devDependencies": {
     "glob": "^11.0.1"
