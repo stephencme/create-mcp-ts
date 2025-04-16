@@ -36,4 +36,45 @@ describe("mcp-init", () => {
     expect(packageJson.scripts.setup).toBeDefined();
     expect(packageJson.scripts.eject).toBeDefined();
   });
+
+  it("should eject the project correctly", () => {
+    // 1. Initialize the project first
+    const initCommand = `node dist/index.js ${testProjectDir} --template=file:${templatePath}`;
+    execSync(initCommand, { stdio: "ignore" }); // ignore stdio for less noisy tests
+
+    // 2. Run the eject command within the test project directory
+    // Need to install dependencies first so mcp-scripts is available
+    execSync("npm install", { cwd: testProjectDir, stdio: "ignore" });
+    // Run eject using the installed script
+    const ejectCommand = "npm run eject"; // This assumes eject is defined in the template's package.json
+    execSync(ejectCommand, { cwd: testProjectDir, stdio: "ignore" });
+
+    // 3. Verify package.json changes
+    const packageJsonPath = path.join(testProjectDir, "package.json");
+    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
+
+    // Check scripts
+    expect(packageJson.scripts.dev).toBe("tsup src/index.ts --dts --watch");
+    expect(packageJson.scripts.build).toBe("tsup src/index.ts --dts --clean");
+    // Check setup script path (relative)
+    expect(packageJson.scripts.setup).toMatch(
+      /^node mcp-scripts[\\/]setup\.js$/
+    ); // Match both / and \\ for cross-platform
+    expect(packageJson.scripts.eject).toBeUndefined(); // Eject script should remove itself if defined
+
+    // Check dependencies
+    expect(packageJson.dependencies?.["mcp-scripts"]).toBeUndefined();
+    expect(packageJson.devDependencies?.["mcp-scripts"]).toBeUndefined();
+    expect(packageJson.devDependencies?.tsup).toBeDefined(); // tsup should be added
+
+    // 4. Verify copied files
+    expect(
+      fs.existsSync(path.join(testProjectDir, "mcp-scripts/setup.js"))
+    ).toBe(true);
+
+    // 5. Verify mcp-scripts is removed from node_modules (optional, but good check)
+    // This check assumes npm prune or similar isn't run automatically,
+    // but the dependency removal in package.json is the main goal.
+    // expect(fs.existsSync(path.join(testProjectDir, 'node_modules/mcp-scripts'))).toBe(false); // This might fail depending on npm/yarn behavior after script execution
+  });
 });

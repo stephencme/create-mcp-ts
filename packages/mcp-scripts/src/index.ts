@@ -8,6 +8,7 @@ const commands = {
   dev: "tsup src/index.ts --dts --watch",
   build: "tsup src/index.ts --dts --clean",
   setup: `node ${join(__dirname, "setup.js")}`,
+  eject: `node ${join(__dirname, "eject.js")}`,
 };
 
 // Execute a command
