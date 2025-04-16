@@ -142,6 +142,10 @@ try {
     )}`;
     scriptsUpdated = true;
   }
+  if (freshProjectScripts.eject === "mcp-scripts eject") {
+    delete freshProjectScripts.eject;
+    scriptsUpdated = true;
+  }
 
   if (scriptsUpdated) {
     freshProjectPackageJson.scripts = freshProjectScripts;
