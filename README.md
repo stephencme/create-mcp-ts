@@ -1,5 +1,7 @@
 # mcp-init
 
+https://img.shields.io/npm/v/:mcp-init
+
 [packages/mcp-init](./packages/mcp-init/README.md)
 
 Create a new MCP server in TypeScript, batteries included.
