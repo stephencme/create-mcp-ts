@@ -2,6 +2,9 @@
 
 Create a new MCP server in TypeScript, batteries included.
 
+> [!CAUTION]
+> This project has been renamed to `create-mcp-ts`. Please see the new repository at [https://github.com/stephencme/create-mcp-ts](https://github.com/stephencme/create-mcp-ts).
+
 ## Getting started
 
 ```shell
