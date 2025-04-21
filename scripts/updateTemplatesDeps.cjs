@@ -12,7 +12,7 @@ try {
 
   // Find all template package.json files
   const templatePackageFiles = glob.sync(
-    "packages/mcpi-template-*/package.json"
+    "packages/mcp-ts-template-*/package.json"
   );
 
   // Update mcp-scripts dependency in each template package

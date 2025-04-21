@@ -1,21 +1,21 @@
-# mcp-init
+# create-mcp-ts
 
 Create a new MCP server in TypeScript, batteries included.
 
 ## Getting started
 
 ```shell
-npx mcp-init your-mcp-server
+npm init mcp-ts your-mcp-server
 cd your-mcp-server
 npm run setup
 npm run dev
 ```
 
-`mcp-init` requires **zero build configuration** - it will automatically install everything you need to develop, build, and set up your MCP server.
+`create-mcp-ts` requires **zero build configuration** - it will automatically install everything you need to develop, build, and set up your MCP server.
 
 ### Set up your MCP server in Cursor, Windsurf, and Claude Desktop
 
-`mcp-init` can automatically configure your MCP server in Cursor, Windsurf, and Claude Desktop:
+`create-mcp-ts` can automatically configure your MCP server in Cursor, Windsurf, and Claude Desktop:
 
 ```shell
 npm run setup
@@ -42,11 +42,11 @@ For more details on how to set up MCP servers in Cursor, Windsurf, and Claude De
 
 ### Custom templates
 
-If you'd like to use a custom template, you can do so by passing the template npm package name or file path to the `npx mcp-init` command:
+If you'd like to use a custom template, you can do so by passing the template npm package name or file path to the `npx create-mcp-ts` command:
 
 ```shell
-npx mcp-init your-mcp-server --template=mcpi-template-default
-npx mcp-init your-mcp-server --template=file:/path/to/mcpi-template
+npx create-mcp-ts your-mcp-server --template=mcp-ts-template-default
+npx create-mcp-ts your-mcp-server --template=file:/path/to/mcp-ts-template
 ```
 
 ### Publishing your MCP server
@@ -61,7 +61,7 @@ If you plan to share your MCP server, you can publish it to npm:
 
 ## Ejecting from `mcp-scripts`
 
-The `mcp-scripts` package contains build tools for `mcp-init` projects - everything you'll need to develop, build, and set up an MCP server **without any additional configuration**.
+The `mcp-scripts` package contains build tools for `create-mcp-ts` projects - everything you'll need to develop, build, and set up an MCP server **without any additional configuration**.
 
 Under the hood `mcp-scripts` uses [tsup](https://github.com/egoist/tsup) and [esbuild](https://github.com/evanw/esbuild), lightweight, battle-tested utilities that are well-suited for production-grade TypeScript projects.
 
@@ -108,11 +108,11 @@ which node
 
 Make sure to update your MCP config in each client (Cursor, Windsurf, or Claude Desktop) with the correct absolute path to the Node.js binary you want to use.
 
-For any other issues, please [open an issue here](https://github.com/stephencme/mcp-init/issues/new).
+For any other issues, please [open an issue here](https://github.com/stephencme/create-mcp-ts/issues/new).
 
 ## Philosophy
 
-`mcp-init` is designed to be a batteries-included, "it just works" experience for MCP server developers.
+`create-mcp-ts` is designed to be a batteries-included, "it just works" experience for MCP server developers.
 
 - **Batteries included**: there is only one build dependency, `mcp-scripts`. It uses tsup, esbuild, and other amazing open source projects, but provides a curated experience on top of them.
 - **Zero configuration**: you don't need to configure anything. A reasonably good configuration is handled for you so you can focus on writing code.

@@ -2,10 +2,10 @@ import { execSync } from "child_process";
 import fs from "fs-extra";
 import path from "path";
 
-describe("mcp-init", () => {
-  const testProjectDir = "./.mcpi/test-mcp-server";
+describe("create-mcp-ts", () => {
+  const testProjectDir = "./.mcp-ts/test-mcp-server";
   const testProjectName = path.basename(testProjectDir);
-  const templatePath = "../mcpi-template-default";
+  const templatePath = "../mcp-ts-template-default";
 
   afterEach(() => {
     // Clean up test directory after each test

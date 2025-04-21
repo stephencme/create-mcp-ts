@@ -1,6 +1,6 @@
 # Getting started with your MCP server
 
-This project was bootstrapped with [mcp-init](https://github.com/stephencme/mcp-init).
+This project was bootstrapped with [create-mcp-ts](https://github.com/stephencme/create-mcp-ts).
 
 It provides a basic template for building an MCP (Model Context Protocol) server using TypeScript.
 
@@ -41,7 +41,7 @@ It checks the respective configuration files (`.json`) and adds an entry for you
 }
 ```
 
-**Note**: You might need to adjust the `"command"` if your Node.js installation is not in the default system PATH, especially when using version managers like `nvm` or `nodenv`. See the [Troubleshooting](#troubleshooting-your-mcp-server-configuration) section in the `mcp-init` README for details.
+**Note**: You might need to adjust the `"command"` if your Node.js installation is not in the default system PATH, especially when using version managers like `nvm` or `nodenv`. See the [Troubleshooting](#troubleshooting-your-mcp-server-configuration) section in the `create-mcp-ts` README for details.
 
 ### `npm run eject`
 
@@ -65,10 +65,10 @@ If you plan to share your MCP server, you can publish it to npm:
 
 ## Troubleshooting
 
-See the [Troubleshooting](https://github.com/stephencme/mcp-init#troubleshooting-your-mcp-server) section in the `mcp-init` README for common issues.
+See the [Troubleshooting](https://github.com/stephencme/create-mcp-ts#troubleshooting-your-mcp-server) section in the `create-mcp-ts` README for common issues.
 
 ## Learn more
 
 - **Model Context Protocol (MCP)**: Learn more about the protocol at [modelcontextprotocol.io](https://modelcontextprotocol.io/).
-- **mcp-init**: Check out the tool that created this template [here](https://github.com/stephencme/mcp-init).
+- **create-mcp-ts**: Check out the tool that created this template [here](https://github.com/stephencme/create-mcp-ts).
 - **TypeScript**: Learn more about TypeScript [here](https://www.typescriptlang.org/).

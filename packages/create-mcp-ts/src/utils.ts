@@ -42,14 +42,14 @@ const helpString = () => `Only ${chalk.green(
 
     A custom ${chalk.cyan("--template")} can be one of:
       - a custom template published on npm: ${chalk.green(
-        "mcpi-template-default"
+        "mcp-ts-template-default"
       )}
       - a local path relative to the current working directory: ${chalk.green(
         "file:../your-custom-template"
       )}
 
     If you have any problems, do not hesitate to file an issue:
-      ${chalk.cyan("https://github.com/stephencme/mcp-init/issues/new")}`;
+      ${chalk.cyan("https://github.com/stephencme/create-mcp-ts/issues/new")}`;
 
 // Specify project directory string
 const specifyProjectDirectoryString = (programName: string) =>

@@ -1,13 +1,13 @@
 {
   "name": "mcp-scripts",
-  "version": "0.3.0",
-  "description": "The build tools that powermcp-init projects",
+  "version": "0.3.1",
+  "description": "The build tools that power create-mcp-ts projects",
   "author": "stephencme",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/stephencme/mcp-init.git",
-    "directory": "packages/mcpi-template-default"
+    "url": "https://github.com/stephencme/create-mcp-ts.git",
+    "directory": "packages/mcp-ts-template-default"
   },
   "bin": "./dist/index.js",
   "scripts": {

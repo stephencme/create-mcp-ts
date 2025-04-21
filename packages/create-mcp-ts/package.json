@@ -1,13 +1,13 @@
 {
-  "name": "mcp-init",
-  "version": "0.3.0",
+  "name": "create-mcp-ts",
+  "version": "0.3.1",
   "description": "Create a new MCP server in TypeScript, batteries included.",
   "author": "stephencme",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/stephencme/mcp-init.git",
-    "directory": "packages/mcp-init"
+    "url": "https://github.com/stephencme/create-mcp-ts.git",
+    "directory": "packages/create-mcp-ts"
   },
   "keywords": [
     "create",

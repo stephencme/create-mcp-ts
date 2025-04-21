@@ -1,13 +1,13 @@
 {
-  "name": "mcpi-template-default",
-  "version": "0.3.0",
-  "description": "Default project template for mcp-init.",
+  "name": "mcp-ts-template-default",
+  "version": "0.3.1",
+  "description": "Default project template for create-mcp-ts.",
   "author": "stephencme",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/stephencme/mcp-init.git",
-    "directory": "packages/mcpi-template-default"
+    "url": "https://github.com/stephencme/create-mcp-ts.git",
+    "directory": "packages/mcp-ts-template-default"
   },
   "bin": "./dist/index.js",
   "scripts": {
@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.13.13",
-    "mcp-scripts": "^0.3.0",
+    "mcp-scripts": "^0.3.1",
     "typescript": "^5.8.2"
   }
 }

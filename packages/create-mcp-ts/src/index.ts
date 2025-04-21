@@ -77,7 +77,7 @@ async function run() {
   printCreatingServer(resolvedProjectPath);
 
   // Determine which template to use (default or custom)
-  const templateName = options.template || "mcpi-template-default";
+  const templateName = options.template || "mcp-ts-template-default";
   printUsingTemplate(templateName);
 
   // Copy template contents
@@ -190,7 +190,7 @@ async function run() {
     await executeCmd("git", ["add", "-A"], resolvedProjectPath);
     await executeCmd(
       "git",
-      ["commit", "-m", "Initial commit from mcp-init"],
+      ["commit", "-m", "Initial commit from create-mcp-ts"],
       resolvedProjectPath
     );
     console.log("Created git commit.");

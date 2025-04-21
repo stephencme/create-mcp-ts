@@ -1,16 +1,15 @@
-# mcp-init
+# create-mcp-ts
 
-![NPM Version](https://img.shields.io/npm/v/mcp-init)
+![NPM Version](https://img.shields.io/npm/v/create-mcp-ts)
 
-
-[packages/mcp-init](./packages/mcp-init/README.md)
+[packages/create-mcp-ts](./packages/create-mcp-ts/README.md)
 
 Create a new MCP server in TypeScript, batteries included.
 
 [packages/mcp-scripts](./packages/mcp-scripts/README.md)
 
-The build tools that power`mcp-init` projects.
+The build tools that power `create-mcp-ts` projects.
 
-[packages/mcpi-template-default](./packages/mcpi-template-default/README.md)
+[packages/mcp-ts-template-default](./packages/mcp-ts-template-default/README.md)
 
-Default project template for `mcp-init`.
+Default project template for `create-mcp-ts`.
