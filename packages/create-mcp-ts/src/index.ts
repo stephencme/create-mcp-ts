@@ -105,7 +105,9 @@ async function run() {
       // Copy files with special file name handling
       const templateFiles = fs
         .readdirSync(localTemplatePath)
-        .filter((file) => !["node_modules", ".git"].includes(file));
+        .filter(
+          (file) => !["node_modules", ".git", "README.md"].includes(file)
+        );
 
       templateFiles.forEach((file) => {
         const srcPath = path.join(localTemplatePath, file);
@@ -139,7 +141,9 @@ async function run() {
       );
       const templateFiles = fs
         .readdirSync(templatePath)
-        .filter((file) => !["node_modules", ".git"].includes(file));
+        .filter(
+          (file) => !["node_modules", ".git", "README.md"].includes(file)
+        );
 
       // Copy each file/directory from the template with special file name handling
       templateFiles.forEach((file) => {
@@ -153,6 +157,15 @@ async function run() {
 
       // Clean up after template installation
       await executeCmd("npm", ["uninstall", templateName], resolvedProjectPath);
+    }
+
+    // Copy README.template.md to README.md
+    const readmeTemplatePath = path.join(__dirname, "..", "README.template.md");
+    if (fs.existsSync(readmeTemplatePath)) {
+      fs.copyFileSync(
+        readmeTemplatePath,
+        path.join(resolvedProjectPath, "README.md")
+      );
     }
 
     console.log("Template copied successfully.");
