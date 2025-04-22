@@ -1,6 +1,6 @@
 {
   "name": "create-mcp-ts",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Create a new MCP server in TypeScript, batteries included.",
   "author": "stephencme",
   "license": "MIT",

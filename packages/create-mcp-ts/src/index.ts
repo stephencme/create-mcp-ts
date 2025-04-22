@@ -3,6 +3,7 @@
 import { Command } from "commander";
 import fs from "fs-extra";
 import path from "path";
+import { fileURLToPath } from "url";
 import validatePackageName from "validate-npm-package-name";
 import {
   executeCmd,
@@ -19,6 +20,10 @@ import {
 
 // Load package.json for version and name information
 const packageJson = require("../package.json") as any;
+
+// Get current file directory in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 let projectDir = "";
 
