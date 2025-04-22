@@ -24,6 +24,7 @@ describe("create-mcp-ts", () => {
     expect(fs.existsSync(path.join(testProjectDir, "package.json"))).toBe(true);
     expect(fs.existsSync(path.join(testProjectDir, "src"))).toBe(true);
     expect(fs.existsSync(path.join(testProjectDir, ".git"))).toBe(true);
+    expect(fs.existsSync(path.join(testProjectDir, ".gitignore"))).toBe(true);
 
     // Verify package.json content
     const packageJson = JSON.parse(
