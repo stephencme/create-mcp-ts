@@ -54,8 +54,12 @@ describe("create-mcp-ts", () => {
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
 
     // Check scripts
-    expect(packageJson.scripts.dev).toBe("tsup src/index.ts --dts --watch");
-    expect(packageJson.scripts.build).toBe("tsup src/index.ts --dts --clean");
+    expect(packageJson.scripts.dev).toBe(
+      "tsup src/index.ts --format esm --dts --watch"
+    );
+    expect(packageJson.scripts.build).toBe(
+      "tsup src/index.ts --format esm --dts --clean"
+    );
     // Check setup script path (relative)
     expect(packageJson.scripts.setup).toMatch(
       /^node mcp-scripts[\\/]setup\.js$/

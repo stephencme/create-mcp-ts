@@ -21,9 +21,12 @@
   "type": "module",
   "bin": "./dist/index.js",
   "scripts": {
-    "build": "tsup src/index.ts --dts --clean",
-    "build:watch": "tsup src/index.ts --dts --watch",
-    "test": "jest"
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "build:watch": "tsup src/index.ts --format esm --dts --watch",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
+  },
+  "jest": {
+    "preset": "ts-jest/presets/default-esm"
   },
   "dependencies": {
     "chalk": "^4.1.2",
