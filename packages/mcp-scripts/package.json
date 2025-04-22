@@ -1,6 +1,6 @@
 {
   "name": "mcp-scripts",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "The build tools that power create-mcp-ts projects",
   "author": "stephencme",
   "license": "MIT",

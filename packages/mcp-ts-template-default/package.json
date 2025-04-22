@@ -1,6 +1,6 @@
 {
   "name": "mcp-ts-template-default",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Default project template for create-mcp-ts.",
   "author": "stephencme",
   "license": "MIT",
@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.13.13",
-    "mcp-scripts": "^0.3.2",
+    "mcp-scripts": "^0.3.3",
     "typescript": "^5.8.2"
   }
 }

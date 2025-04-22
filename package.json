@@ -7,9 +7,9 @@
     "build": "npm run build -ws",
     "version": "npm version -ws",
     "postversion": "node scripts/updateTemplatesDeps.cjs",
-    "version:major": "npm run build && npm run version major",
-    "version:minor": "npm run build && npm run version minor",
-    "version:patch": "npm run build && npm run version patch",
+    "version:major": "npm run version major && npm run build",
+    "version:minor": "npm run version minor && npm run build",
+    "version:patch": "npm run version patch && npm run build",
     "publish": "npm publish -ws"
   },
   "devDependencies": {
