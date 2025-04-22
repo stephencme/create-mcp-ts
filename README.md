@@ -5,6 +5,8 @@
 > [!NOTE]
 > The `create-mcp-ts` npm package is located in [packages/create-mcp-ts](./packages/create-mcp-ts/README.md).
 
+---
+
 [packages/create-mcp-ts](./packages/create-mcp-ts/README.md)
 
 Create a new MCP server in TypeScript, batteries included.
