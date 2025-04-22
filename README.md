@@ -1,6 +1,4 @@
-# create-mcp-ts
-
-![NPM Version](https://img.shields.io/npm/v/create-mcp-ts)
+# create-mcp-ts ![NPM Version](https://img.shields.io/npm/v/create-mcp-ts)
 
 Create a new MCP server in TypeScript, batteries included.
 
