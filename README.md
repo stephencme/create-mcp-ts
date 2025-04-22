@@ -120,7 +120,7 @@ For any other issues, please [open an issue here](https://github.com/stephencme/
 
 This project is inspired by [create-react-app](https://github.com/facebook/create-react-app).
 
-## Related packages
+## Packages
 
 - **[packages/create-mcp-ts](./packages/create-mcp-ts)**: Create a new MCP server in TypeScript, batteries included.
 - **[packages/mcp-scripts](./packages/mcp-scripts)**: The build tools that power `create-mcp-ts` projects.
