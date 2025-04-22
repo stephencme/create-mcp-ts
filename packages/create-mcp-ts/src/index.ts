@@ -15,7 +15,7 @@ import {
   printUsingTemplate,
   templateDescriptionString,
   usageString,
-} from "./utils";
+} from "./utils.js";
 
 // Load package.json for version and name information
 const packageJson = require("../package.json") as any;
@@ -36,6 +36,15 @@ const program = new Command(packageJson.name)
   .parse();
 
 const options = program.opts();
+
+// Helper function to handle special file names during template copying
+function getDestinationFileName(srcFileName: string): string {
+  // Handle special cases for template files
+  if (srcFileName === "gitignore") {
+    return ".gitignore";
+  }
+  return srcFileName;
+}
 
 async function run() {
   // Clean up project directory string input
@@ -93,7 +102,19 @@ async function run() {
         );
         process.exit(1);
       }
-      fs.copySync(localTemplatePath, resolvedProjectPath);
+      // Copy files with special file name handling
+      const templateFiles = fs
+        .readdirSync(localTemplatePath)
+        .filter((file) => !["node_modules", ".git"].includes(file));
+
+      templateFiles.forEach((file) => {
+        const srcPath = path.join(localTemplatePath, file);
+        const destPath = path.join(
+          resolvedProjectPath,
+          getDestinationFileName(file)
+        );
+        fs.copySync(srcPath, destPath);
+      });
     } else {
       // For npm packages, first create a package.json
       const tempPackageJson = {
@@ -120,10 +141,13 @@ async function run() {
         .readdirSync(templatePath)
         .filter((file) => !["node_modules", ".git"].includes(file));
 
-      // Copy each file/directory from the template
+      // Copy each file/directory from the template with special file name handling
       templateFiles.forEach((file) => {
         const srcPath = path.join(templatePath, file);
-        const destPath = path.join(resolvedProjectPath, file);
+        const destPath = path.join(
+          resolvedProjectPath,
+          getDestinationFileName(file)
+        );
         fs.copySync(srcPath, destPath);
       });
 

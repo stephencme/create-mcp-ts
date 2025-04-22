@@ -18,6 +18,7 @@
     "cli",
     "generator"
   ],
+  "type": "module",
   "bin": "./dist/index.js",
   "scripts": {
     "build": "tsup src/index.ts --dts --clean",

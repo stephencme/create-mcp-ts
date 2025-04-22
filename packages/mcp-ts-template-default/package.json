@@ -9,6 +9,7 @@
     "url": "https://github.com/stephencme/create-mcp-ts.git",
     "directory": "packages/mcp-ts-template-default"
   },
+  "type": "module",
   "bin": "./dist/index.js",
   "scripts": {
     "dev": "mcp-scripts dev",

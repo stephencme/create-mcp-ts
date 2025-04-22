@@ -2,11 +2,15 @@
 
 import { spawn } from "child_process";
 import { join } from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 // Define commands
 const commands = {
-  dev: "tsup src/index.ts --dts --watch",
-  build: "tsup src/index.ts --dts --clean",
+  dev: "tsup src/index.ts --format esm --dts --watch",
+  build: "tsup src/index.ts --format esm --dts --clean",
   setup: `node ${join(__dirname, "setup.js")}`,
   eject: `node ${join(__dirname, "eject.js")}`,
 };

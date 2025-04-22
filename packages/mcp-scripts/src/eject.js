@@ -1,5 +1,11 @@
-const fs = require("fs");
-const path = require("path");
+#!/usr/bin/env node
+
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 console.log("Ejecting from mcp-scripts...");
 
@@ -127,11 +133,11 @@ try {
   let scriptsUpdated = false;
 
   if (freshProjectScripts.dev === "mcp-scripts dev") {
-    freshProjectScripts.dev = "tsup src/index.ts --dts --watch";
+    freshProjectScripts.dev = "tsup src/index.ts --format esm --dts --watch";
     scriptsUpdated = true;
   }
   if (freshProjectScripts.build === "mcp-scripts build") {
-    freshProjectScripts.build = "tsup src/index.ts --dts --clean";
+    freshProjectScripts.build = "tsup src/index.ts --format esm --dts --clean";
     scriptsUpdated = true;
   }
   if (freshProjectScripts.setup === "mcp-scripts setup") {

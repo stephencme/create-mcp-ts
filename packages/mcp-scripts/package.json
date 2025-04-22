@@ -9,9 +9,10 @@
     "url": "https://github.com/stephencme/create-mcp-ts.git",
     "directory": "packages/mcp-ts-template-default"
   },
+  "type": "module",
   "bin": "./dist/index.js",
   "scripts": {
-    "build": "tsup src/index.ts src/setup.ts src/eject.js --dts --clean"
+    "build": "tsup src/index.ts src/setup.ts src/eject.js --format esm --dts --clean"
   },
   "dependencies": {
     "@types/node": "^22.13.13",

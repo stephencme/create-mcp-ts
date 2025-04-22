@@ -1,0 +1,7 @@
+.mcp-ts/
+node_modules/
+
+# System
+.DS_Store
+.idea/
+.vscode/
