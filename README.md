@@ -5,9 +5,8 @@ Create a new MCP server in TypeScript, batteries included.
 ## Getting started
 
 ```shell
-npm init mcp-ts your-mcp-server
-cd your-mcp-server
-npm run setup
+npm init mcp-ts your-server
+cd your-server
 npm run dev
 ```
 
@@ -21,14 +20,14 @@ npm run dev
 npm run setup
 ```
 
-This script checks if `your-mcp-server` already exists in each client's respective MCP configuration file. If not, it adds an entry pointing to the server script (`dist/index.js`):
+This script checks if `your-server` already exists in each client's respective MCP configuration file. If not, it adds an entry pointing to the server script (`dist/index.js`):
 
 ```json
 {
   "mcpConfig": {
-    "your-mcp-server": {
+    "your-server": {
       "command": "node",
-      "args": ["/path/to/your-mcp-server/dist/index.js"]
+      "args": ["/path/to/your-server/dist/index.js"]
     }
   }
 }
@@ -45,8 +44,8 @@ For more details on how to set up MCP servers in Cursor, Windsurf, and Claude De
 If you'd like to use a custom template, you can do so by passing the template npm package name or file path to the `npx create-mcp-ts` command:
 
 ```shell
-npx create-mcp-ts your-mcp-server --template=mcp-ts-template-default
-npx create-mcp-ts your-mcp-server --template=file:/path/to/mcp-ts-template
+npx create-mcp-ts your-server --template=mcp-ts-template-default
+npx create-mcp-ts your-server --template=file:/path/to/mcp-ts-template
 ```
 
 ### Publishing your MCP server
@@ -92,7 +91,7 @@ Some MCP client environments may not have access to the full system PATH, which 
 ```json
 {
   "mcpConfig": {
-    "your-mcp-server": {
+    "your-server": {
       "command": "/absolute/path/to/node",
       "args": ["/path/to/your-mcp-server/dist/index.js"]
     }
